@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"  # RabbitMQ default port
+      - "15672:15672"  # RabbitMQ management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+
+  web_api:
+    image: docker.io/library/garage
+    depends_on:
+     - postgresql_database
+     - redis
+     - rabbitmq
+    ports:
+      - "3002:80"
+      - "3003:5001"  # Expose the Swagger port http://localhost:3003/swagger/index.html
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=UserID=postgres;Password=postgres;Server=postgresql_database;Port=5432;Database=SampleDb;Pooling=true;
+      - ASPNETCORE_URLS=http://+:5001
+
+  postgresql_database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=DriverDb
+    ports:
+      - "5440:5432"
+    restart: always
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+
+  pgadmin:
+    restart: always
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - ./.pgadmin:/root/pgadmin
+    ports:
+      - "5052:80"
+    depends_on:
+      - postgresql_database
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - redis-data:/data
+
+
+volumes:
+  database-data:
+  pgadmin:
+  redis-data:
+
+
