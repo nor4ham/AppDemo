@@ -105,11 +105,19 @@
 /Users/norahaltamimi/Desktop/dotnet/AppDemo/obj/Debug/net8.0/ref/AppDemo.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/appsettings.Development.json
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/appsettings.json
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.runner.visualstudio.testadapter.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AppDemo
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AppDemo.deps.json
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AppDemo.runtimeconfig.json
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AppDemo.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AppDemo.pdb
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AutoFixture.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/AutoMapper.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Castle.Core.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/EFCore.NamingConventions.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Fare.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Humanizer.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
@@ -124,6 +132,7 @@
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Mono.TextTemplating.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Moq.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Npgsql.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
@@ -135,6 +144,10 @@
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/System.Composition.Hosting.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/System.Composition.Runtime.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/System.Composition.TypedParts.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.abstractions.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.assert.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.core.dll
+/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/xunit.execution.dotnet.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -194,6 +207,7 @@
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.csproj.CoreCompileInputs.cache
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.MvcApplicationPartsAssemblyInfo.cs
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.MvcApplicationPartsAssemblyInfo.cache
+/Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.sourcelink.json
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/staticwebassets.build.json
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/staticwebassets.development.json
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/staticwebassets/msbuild.AppDemo.Microsoft.AspNetCore.StaticWebAssets.props
@@ -208,4 +222,3 @@
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.pdb
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/AppDemo.genruntimeconfig.cache
 /Users/norahaltamimi/Desktop/AppDemo/obj/Debug/net8.0/ref/AppDemo.dll
-/Users/norahaltamimi/Desktop/AppDemo/bin/Debug/net8.0/EFCore.NamingConventions.dll
