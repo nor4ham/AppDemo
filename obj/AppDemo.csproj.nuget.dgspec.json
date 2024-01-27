@@ -38,14 +38,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AutoFixture": {
-              "target": "Package",
-              "version": "[4.18.1, )"
-            },
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
             "EFCore.NamingConventions": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -68,13 +60,17 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
-            "Moq": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[4.20.70, )"
+              "version": "[13.0.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "NuGet.Frameworks": {
+              "target": "Package",
+              "version": "[6.8.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -83,12 +79,6 @@
             "xunit": {
               "target": "Package",
               "version": "[2.6.6, )"
-            },
-            "xunit.runner.visualstudio": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.5.6, )"
             }
           },
           "imports": [
