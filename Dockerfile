@@ -10,6 +10,11 @@ RUN dotnet restore
 
 # Copy everything else and build
 COPY . ./
+
+RUN echo "****** Starting ASP.NET Test ******"
+
+RUN dotnet test AppDemo.Tests/AppDemo.Tests.csproj
+
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
@@ -17,5 +22,3 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /App
 COPY --from=build-env /App/out .
 ENTRYPOINT ["dotnet", "AppDemo.dll"]
-# Add a command to print a message to the terminal
-CMD ["echo", "Hello from AppDemo Docker container!"]
