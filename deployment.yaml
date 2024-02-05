@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appdemo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appdemo
+  template:
+    metadata:
+      labels:
+        app: appdemo
+    spec:
+      containers:
+        - name: appdemo
+          image: ghcr.io/nor4ham/appdemo:sha-e2ba38e
+          ports:
+            - containerPort: 80
