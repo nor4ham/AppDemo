@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deploy
+  namespace: app
+  labels:
+    app: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      imagePullSecrets:
+      - name: ghcr-creds
+      initContainers:
+      - name: wait-for-postgresql
+        image: busybox
+        command: ['sh', '-c', 'until nc -z postgres-service 5432; do echo "Waiting for PostgreSQL to be ready"; sleep 2; done;']
+      containers:
+      - name: app
+        image: ghcr.io/nor4ham/appdemo:13-arm64
+        ports:
+        - containerPort: 8000
+        env:
+        - name: UserID
+          value: "postgres"
+        - name: Server
+          value: "postgres-service"
+        - name: Database
+          value: "SampleDb"
+        - name: Password
+          valueFrom:
+            secretKeyRef:
+              name: db-password-secret
+              key: Password
+        - name: Port
+          value: "5432"
+        - name: RedisHost
+          value: "redis-service"
+        - name: RedisPort
+          value: "6379"
+        - name: RabbitMQHost
+          value: "rabbitmq-service"
+        - name: RabbitMQPort
+          value: "5672"
+          
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+  namespace: app
+  labels:
+    app: app
+spec:
+  selector:
+    app: app
+  type: NodePort #ClusterIP
+  ports:
+    - name: app
+      port: 8000
+      targetPort: 8080
+      nodePort: 30899
