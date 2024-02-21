@@ -60,7 +60,7 @@ metadata:
 spec:
   selector:
     app: app
-  type: NodePort #ClusterIP
+  type: LoadBalancer #ClusterIP
   ports:
     - name: app
       port: 8000

@@ -1,16 +1,22 @@
 #!/bin/bash
 
 # Variables
-cluster_name=""
-region="" #Make sure it is the same in the terraform variables
-alibaba_id=""
-repo_name="appdemo"
-domain=""
 dbsecret="db-password-secret"
 namespace="app"
 # End Variables
 
+# create the cluster
+echo "--------------------Creating ack--------------------"
 
+cd terraform-v1 
+terraform init 
+terraform apply -auto-approve
+cd ..
+
+
+ # after Connect to the cluster
+
+ # ......
 
 # create namespace
 echo "--------------------creating Namespace--------------------"
@@ -22,13 +28,11 @@ PASSWORD=$(openssl rand -base64 12)
 
 # Store the generated password in k8s secrets
 echo "--------------------Store the generated password in k8s secret--------------------"
-kubectl create secret generic $dbsecret --from-literal=Password=$PASSWORD --namespace=$namespace || true
+kubectl create secret generic $dbsecret --from-literal=DB_PASSWORD=$PASSWORD --namespace=$namespace || true
 
 # Deploy the application
 echo "--------------------Deploy App--------------------"
-cd Desktop/dotnet/AppDemo/
 kubectl apply -n $namespace -f k8s
 
-
-
-
+# Wait for application to be deployed
+echo "--------------------Wait for all pods to be running--------------------"

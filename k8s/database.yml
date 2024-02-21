@@ -54,7 +54,7 @@ spec:
     - name: postgres
       port: 5432
       targetPort: 5432
-  type: NodePort #ClusterIP
+  type: LoadBalancer #ClusterIP
   
 ---
 apiVersion: v1
